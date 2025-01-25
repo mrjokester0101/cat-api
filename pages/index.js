@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
 
   return (
-    <home>
+    <div className={styles.home}>
       <div className={styles.container}>
         <h1 className={styles.title}>Random Cat Image</h1>
         {catImage ? (
@@ -30,6 +30,6 @@ export default function Home() {
           <div className={styles.loading}>Loading...</div>
         )}
       </div>
-    </home>
+    </div>
   );
 }
