@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
 
 export default function handler(req, res) {
   const catsDir = path.join(process.cwd(), "public/cats");
@@ -9,6 +9,6 @@ export default function handler(req, res) {
     if (!files.length) return res.status(404).json({ error: "No images found" });
 
     const randomFile = files[Math.floor(Math.random() * files.length)];
-    res.json({ image: `/cats/${randomFile}` });
+    res.status(200).json({ image: `/cats/${randomFile}` });
   });
 }
