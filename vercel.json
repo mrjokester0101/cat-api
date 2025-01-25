@@ -1,14 +1,6 @@
 {
   "routes": [
     {
-      "src": "/api/cat",
-      "dest": "/pages/api/cat.js"
-    },
-    {
-      "src": "/cat.json",
-      "dest": "/public/cat.json"
-    },
-    {
       "src": "/cats/(.*)",
       "dest": "/public/cats/$1"
     }
