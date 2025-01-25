@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   const [catImage, setCatImage] = useState(null);
@@ -14,12 +16,17 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <h1>Random Cat Image</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Random Cat Image</h1>
       {catImage ? (
-        <img src={catImage} alt="Random Cat" />
+        <Image
+          className={styles.catImage}
+          src={catImage}
+          alt="Random Cat"
+          layout="intrinsic"
+        />
       ) : (
-        <p>Loading...</p>
+        <div className={styles.loading}>Loading...</div>
       )}
     </div>
   );
