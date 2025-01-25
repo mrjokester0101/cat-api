@@ -1,5 +1,12 @@
 {
   "routes": [
-    { "src": "/cats/(.*)", "dest": "/public/cats/$1" }
+    {
+      "src": "/api/cat",
+      "dest": "/pages/api/cat.js"
+    },
+    {
+      "src": "/cats/(.*)",
+      "dest": "/public/cats/$1"
+    }
   ]
 }
