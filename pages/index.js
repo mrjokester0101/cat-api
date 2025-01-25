@@ -39,9 +39,9 @@ const Home = () => {
             
             <div className={styles.grid}>
               <div className={styles.card}>
-                <h2>The API</h2>
-                <a href="https://discord.com/oauth2/authorize?client_id=1251525661185806336&permissions=8&integration_type=0&scope=bot" className={styles.linkcard}>
-                  <p>Get Invite</p>
+                <h2>The Random Cat Images API</h2>
+                <a href="https://cat-api-jet.vercel.app/api/cat" className={styles.linkcard}>
+                  <p>Click Me</p>
                 </a>
               </div>
            </div>
