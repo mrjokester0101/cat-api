@@ -7,7 +7,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchCatImage = async () => {
-      const response = await fetch('/api/cat');
+      const response = await fetch('/api/theofficialapithatcatapiactuallyuses');
       const data = await response.json();
       setCatImage(data.image);
     };
