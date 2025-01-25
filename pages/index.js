@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import styles from '../styles/Home.css';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   const [catImage, setCatImage] = useState(null);
