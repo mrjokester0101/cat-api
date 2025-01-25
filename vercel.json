@@ -1,8 +1,0 @@
-{
-  "routes": [
-    {
-      "src": "/cats/(.*)",
-      "dest": "/public/cats/$1"
-    }
-  ]
-}
