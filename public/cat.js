@@ -14,3 +14,8 @@ const jsonContent = {
 };
 
 fs.writeFileSync(path.join(__dirname, 'cat.json'), JSON.stringify(jsonContent));
+
+module.exports = (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.status(200).send(jsonContent);
+};
