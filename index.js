@@ -8,7 +8,6 @@ const PORT = 3000;
 
 app.use(cors());
 app.use("/cats", express.static(path.join(__dirname, "public/cats")));
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/cat", catRouter);
 
 app.listen(PORT, () => {
