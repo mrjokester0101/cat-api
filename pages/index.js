@@ -5,6 +5,15 @@ import styles from '../styles/Home.module.css';
 
 const Home = () => {
   const [catImage, setCatImage] = useState(null);
+  const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
+  };
 
   useEffect(() => {
     const fetchCatImage = async () => {
@@ -23,19 +32,28 @@ const Home = () => {
         <meta name="description" content="The Random Cat Images API." />
         <link rel="icon" href="/cats/cat1.png" />
       </Head>
+
       <main className={styles.main}>
         <h1 className={styles.title}>Random Cat Image</h1>
+
+        <div className={styles.toggleContainer}>
+          <button className={styles.toggleButton} onClick={toggleTheme}>
+            Switch to {theme === 'dark' ? 'Light' : 'Dark'} Mode
+          </button>
+        </div>
+
         {catImage ? (
           <Image
             className={styles.catImage}
             src={catImage}
             alt="Random Cat"
-            layout="intrinsic"
+            width={300}
+            height={300}
           />
         ) : (
           <div className={styles.loading}>Loading...</div>
         )}
-          
+
         <div className={styles.grid}>
           <div className={styles.card}>
             <h2>The Random Cat Images API</h2>
@@ -44,8 +62,11 @@ const Home = () => {
             </a>
           </div>
         </div>
-        
       </main>
+      
+      <footer className={styles.footer}>
+        The cat images are not mine & have been found on google.
+      </footer>
     </div>
   );
 }
