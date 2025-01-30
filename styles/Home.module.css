@@ -33,6 +33,11 @@
   transition: background 0.3s;
 }
 
+/* Light and Dark Mode Styles for Button */
+.toggleButton {
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .light .toggleButton {
   background-color: #444;
   color: #fff;
@@ -43,18 +48,20 @@
   color: #222;
 }
 
+/* Light and Dark Mode Styles for Cat Image */
+.catImage {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  border: 4px solid #444;
+  transition: border 0.3s;
+}
+
 .dark .catImage {
   border: 4px solid #BBB;
 }
 
 .light .catImage {
-  border: 4px solid #444;
-}
-
-.catImage {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
   border: 4px solid #444;
 }
 
@@ -71,6 +78,16 @@
   width: 100%;
 }
 
+.card {
+  background-color: #333;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  border: 2px solid #444;
+  transition: background-color 0.3s, border 0.3s;
+}
+
 .dark .card {
   background-color: #CCC;
   border: 2px solid #BBB;
@@ -78,15 +95,6 @@
 
 .light .card {
   background-color: #333;
-  border: 2px solid #444;
-}
-
-.card {
-  background-color: #333;
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  width: 300px;
   border: 2px solid #444;
 }
 
@@ -109,21 +117,22 @@
   background-color: #18f327;
 }
 
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: background-color 0.3s;
+}
+
+/* Light and Dark Mode Styles for Footer */
 .dark .footer {
   background-color: #EEE;
 }
 
 .light .footer {
   background-color: #111;
-}
-
-.footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #111;
-  font-size: 0.9rem;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
 }
