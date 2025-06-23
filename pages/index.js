@@ -1,19 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Head from "next/head";
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
 const Home = () => {
   const [catImage, setCatImage] = useState(null);
-  const [theme, setTheme] = useState('dark');
-
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
-  };
 
   useEffect(() => {
     const fetchCatImage = async () => {
@@ -35,12 +26,6 @@ const Home = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Random Cat Image</h1>
-
-        <div className={styles.toggleContainer}>
-          <button className={styles.toggleButton} onClick={toggleTheme}>
-            Switch to {theme === 'dark' ? 'Light' : 'Dark'} Mode
-          </button>
-        </div>
 
         {catImage ? (
           <Image
